@@ -1,0 +1,342 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+html{
+	font-size: 62.5%;
+}
+
+:root{
+	--red: #cc0033;
+	--dark-red: #a00028;
+	--light-gray: #303030;
+	--dark-gray: #272727;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+}
+
+ul{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	color: inherit;
+}
+
+p{
+	line-height: 2.5rem;
+}
+
+h1{
+	font-size: 6rem;
+	color:#fff;
+	line-height: 6rem;
+}
+input{
+	width: 100%;
+	height: 5rem;
+	border:0;
+}
+
+.container{
+	padding:0 3.7rem;
+}
+.d-flex{
+	display: flex;
+	flex-wrap: wrap;
+}
+.top-head{
+	background:var(--red);
+	padding:1.3rem 0	;
+}
+header .container{
+	padding: 0 1.2rem;
+}
+
+.logo{
+	max-width: 180px;
+	height: 50px;
+	width: 100%;
+	background: var(--light-gray);
+}
+
+.search-bar{
+	width: 540px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin:auto;
+}
+.search-bar input{
+	background: var(--dark-red);	
+}
+.search-bar button{
+	position: absolute;
+	right:10px;
+	top:0;
+	bottom: 0;
+	border:0;
+	background: transparent;
+}
+
+.primary-menu{
+	height: 4.5rem;
+	background: var(--dark-red);
+}
+
+.bannerBlock{
+	background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("images/B&W_bg.jpg") no-repeat bottom -170px center/cover;
+	padding-bottom:8.2rem;
+}
+.banner-left{
+	color:#fff;
+	max-width: 680px;
+	margin-top: 6.2rem;
+}
+
+.banner-left h2{
+	font-weight: 300;
+	margin:1rem 0 2rem 0;
+
+}
+.bannerBlock .row{
+	justify-content: space-between;
+}
+.banner-right{
+	padding-right: 3.1rem;
+	padding-top:2rem;
+}
+.banner-right img{
+	max-width: 438px;
+}
+
+.boxes-block{
+	position: relative;
+	margin-top: -6rem;
+	padding-bottom: 3rem;
+}
+.boxes-block .row{
+	justify-content: space-between;
+}
+.box{
+	border:14px solid #fff;
+	box-shadow: 0 0 8px #ededed;
+	height: 228px;
+	display: flex;
+	width:calc(33.33% - 3rem);
+	align-items: center;
+	justify-content: center;	
+}
+.box h3{
+	font-weight: 300;
+	color:#fff;
+	font-size: 3.3rem;
+}
+.box:nth-of-type(1){
+	background-color:#35d3b4;
+}
+.box:nth-of-type(2){
+	background-color:#1B2191;
+}
+.box:nth-of-type(3){
+	background-color:#d822ee;
+}
+.site-footer{
+	background-color: var(--dark-gray);	
+	color: #fff;
+}
+.site-footer .row{
+	padding:11.5rem 0;
+	justify-content: center;
+}
+.site-footer .row .footer-links:nth-of-type(1){
+	padding-right:16.8rem;
+}
+.footer-links h3{
+	margin-bottom: 2rem;
+}
+.footer-links li{
+	margin-bottom: 1.5rem;
+}
+.copyright{
+	border-top:1px solid #ccc;
+	padding-bottom: 0.5rem;
+}
+
+
+/* responsiver */
+
+@media(min-width:1025px) and (max-width:1230px){
+
+	.banner-left {
+	    max-width: 480px;
+	}
+	.banner-right img{
+		max-width: 380px;
+		align-self: center;
+	}
+
+}
+@media(max-width:1024px){
+	.bannerBlock {
+   		 background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("images/B&W_bg.jpg") no-repeat bottom/cover;
+	}
+	.search-bar {
+	    padding-left: 1.2rem;
+	    position: relative;
+	    margin:0;
+	}
+	.bannerBlock{
+		position: relative;
+	}
+	.boxes-block{
+		margin-top: 0;
+		padding:7rem 0;
+	}
+	
+	
+}
+
+@media(min-width: 400px) and (max-width: 1024px){
+	.banner-left{
+		width:45%;
+	}
+
+
+	
+	.banner-right img{
+		max-width: 100%;
+	}
+	.search-bar{
+		width: calc( 100% - 180px );	
+	}
+	.banner-right img{
+		width: 100%;
+	}
+	
+
+	.boxes-block .box{
+	    width:calc(50% - 7rem);
+	    margin-bottom: 5.6rem;
+	}
+
+	.boxes-block .box:nth-of-type(3){
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 0;
+	}
+	.bannerBlock .container,.bannerBlock .row{
+		height: 100%;
+	}
+	.banner-right {
+	    align-self: flex-end;
+		position: absolute;
+		bottom:-7.2rem;
+		right: 0;
+		width: 48%;
+	}
+
+
+}
+
+@media(min-width: 400px) and (max-width: 767px){
+
+	h1{
+		font-size: 3rem;
+		line-height: 4rem;
+	}
+	.banner-left{
+		width: 55%;
+	}
+	.site-footer .row .footer-links:nth-of-type(1) {
+    	padding-right: 2.8rem;
+	}
+	.boxes-block .box {
+	    width: calc(50% - 3rem);
+	    margin-bottom: 3.6rem;
+	    height: 220px;
+	}
+	.boxes-block .box h3{
+		font-size: 2rem;
+	}
+	.container{
+		padding: 0 1.5rem;
+	}
+	.bannerBlock p{
+		font-size: 1.4rem;
+	}
+}
+
+@media (max-width: 575px){
+
+	.banner-left{
+		width: 70%;
+	}
+}
+
+@media(min-width: 360px) and (max-width: 399px){
+
+	h1{
+		font-size: 4rem;
+	}
+
+	.logo{
+		width:50px;
+		height: 50px;
+	}
+	.banner-left,.banner-right{
+		width: 100%;
+	}
+	.container{
+		padding: 0 1.5rem;
+	}
+	.search-bar{
+		width: calc(100% - 55px);
+	}
+	.bannerBlock {
+		height: auto;
+		padding-left:3rem;
+		padding-right:3rem;
+	}
+	.box {
+	    border: 0;
+	    height: 50px;
+	    width: 100%;
+	    border-radius: 1rem;
+	    margin-bottom: 1rem;
+	}
+	.box h3{
+		display: none;
+	}
+	
+	.boxes-block{
+		padding-top:5.5rem;
+		padding-bottom: 3.5rem;
+	}
+	.banner-right{
+		margin-bottom: -140px;
+		margin-top: 7rem;
+	}
+	.banner-right img{
+		max-width: 100%;
+	}
+	.site-footer .row{
+		padding: 4rem 0;
+	}
+	.footer-links{
+		width: 100%;
+	}
+	.footer-links:not(:last-child){
+		margin-bottom: 3rem;
+	}
+	.site-footer .row .footer-links:nth-of-type(1) {
+    	padding-right: 0;
+	}
+	.site-footer .row {
+	    width: 50%;
+	    margin: auto;
+	}
+}
